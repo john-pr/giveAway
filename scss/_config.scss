@@ -1,0 +1,40 @@
+$primary-color: #3D3D3D;
+$bg-color: #EBEBEB;
+
+@mixin btn {
+  display: block;
+  text-decoration: none;
+  text-align: center;
+  font-size: 32px;
+  font-weight: 300;
+  border: 1px solid $primary-color;
+  width: 310px;
+  padding: 20px 0;
+  color: $primary-color;
+}
+
+
+//Media query mixins
+@mixin mediaSm {
+  @media screen and (max-width: 500px) {
+    @content;
+  }
+}
+
+@mixin mediaMd {
+  @media screen and (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin mediaLg {
+  @media screen and (min-width: 769px) and (max-width: 1170px) {
+    @content;
+  }
+}
+
+@mixin mediaXl {
+  @media screen and (min-width: 1171px) {
+    @content;
+  }
+}

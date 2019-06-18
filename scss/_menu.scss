@@ -1,0 +1,72 @@
+.menu-btn {
+  position: fixed;
+  z-index: 3;
+  right: 35px;
+  top: 35px;
+  cursor: pointer;
+  visibility: hidden;
+  //@include easeOut;
+
+  .btn-line {
+    width: 28px;
+    height: 3px;
+    margin: 0 0 5px 0;
+    background: $primary-color;
+    //@include easeOut;
+  }
+
+  //Rotation
+  &.close {
+    transform: rotate(180deg);
+
+    .btn-line {
+      //Line 1 - rotate
+      &:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+      }
+
+      //line 2 - hide
+      &:nth-child(2) {
+        opacity: 0;
+      }
+
+      //line 3 - rotate
+      &:nth-child(3) {
+        transform: rotate(-45deg) translate(7px, -6px);
+      }
+    }
+  }
+}
+
+.burger {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  opacity: 0.9;
+  visibility: hidden;
+  background: #dddddd;
+   li {
+     list-style: none;
+     padding: 10px 30px;
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+   }
+   li:first-child {
+      border: 1px solid black;
+   }
+  &.show {
+    visibility: visible;
+  }
+  & {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+    float: left;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+  }
+}

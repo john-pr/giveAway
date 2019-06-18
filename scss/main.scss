@@ -1,17 +1,5 @@
-$primary-color: #3D3D3D;
-$bg-color: #EBEBEB;
-
-@mixin btn {
-  display: block;
-  text-decoration: none;
-  text-align: center;
-  font-size: 32px;
-  font-weight: 300;
-  border: 1px solid $primary-color;
-  width: 310px;
-  padding: 20px 0;
-  color: $primary-color;
-}
+@import 'config';
+@import 'menu';
 
 * {
   margin: 0;
@@ -23,16 +11,24 @@ html {
   color: #3D3D3D;
 }
 
+nav {
+  margin-right:200px;
+}
+
 .loginList {
   margin-top: 30px;
   display: flex;
   justify-content: flex-end;
-  //justify-content: space-between;
   list-style: none;
     li {
+      font-size: 15px;
       margin-left: 20px;
+      padding: 8px 16px;
     }
+}
 
+.createAccount {
+  border: 1px solid yellow;
 }
 
 .navMenu {
@@ -43,6 +39,10 @@ html {
    li {
      //margin-left: 20px;
      padding: 10px 30px;
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
    }
    li:first-child {
      border: 1px solid black;
@@ -57,7 +57,7 @@ header {
 .headerLeft {
     background-image: url("../img/header_start_img.jpg");
     background-repeat: no-repeat;
-    height: 1000px;
+    height: 950px;
     width: 55%;
 }
 
@@ -391,3 +391,5 @@ footer {
   box-sizing: border-box;
   font-size: 30px;
 }
+
+@import 'mobile';
